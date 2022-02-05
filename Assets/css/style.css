@@ -1,0 +1,154 @@
+/*=========================================================*/
+/*Thanh Tuan*/
+/*=========================================================*/
+/*=========================================================*/
+@font-face {
+  font-family: "Fakt-Pro";
+  src: url("/Assets/fonts/FaktPro-Normal.eot");
+  src: url("/Assets/fonts/FaktPro-Normal.eot?#iefix") format("embedded-opentype"), url("/Assets/fonts/FaktPro-Normal.woff2") format("woff2"), url("/Assets/fonts/FaktPro-Normal.woff") format("woff"), url("/Assets/fonts/FaktPro-Normal.ttf") format("truetype"), url("/Assets/fonts/FaktPro-Normal.svg#FaktPro-Normal") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fakt-Pro";
+  src: url("/Assets/fonts/FaktPro-Medium.eot");
+  src: url("/Assets/fonts/FaktPro-Medium.eot?#iefix") format("embedded-opentype"), url("/Assets/fonts/FaktPro-Medium.woff2") format("woff2"), url("/Assets/fonts/FaktPro-Medium.woff") format("woff"), url("/Assets/fonts/FaktPro-Medium.ttf") format("truetype"), url("/Assets/fonts/FaktPro-Medium.svg#FaktPro-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fakt-Pro";
+  src: url("/Assets/fonts/FaktPro-SemiBold.eot");
+  src: url("/Assets/fonts/FaktPro-SemiBold.eot?#iefix") format("embedded-opentype"), url("/Assets/fonts/FaktPro-SemiBold.woff2") format("woff2"), url("/Assets/fonts/FaktPro-SemiBold.woff") format("woff"), url("/Assets/fonts/FaktPro-SemiBold.ttf") format("truetype"), url("/Assets/fonts/FaktPro-SemiBold.svg#FaktPro-SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+@media only screen and (max-width: 768px) {
+  * {
+    font-size: 12px;
+  }
+}
+
+body {
+  font-family: "Fakt-Pro", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  background-color: #ccc;
+}
+
+ul, li {
+  list-style: none;
+  display: inline-block;
+  position: relative;
+}
+
+a {
+  display: inline-block;
+  position: relative;
+}
+
+header {
+  height: 90px;
+  background-color: #fff;
+  position: relative;
+}
+@media only screen and (max-width: 1024px) {
+  header {
+    height: 70px;
+  }
+}
+header .logo {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #fff;
+  border-radius: 20px;
+  z-index: 10;
+}
+@media only screen and (max-width: 1024px) {
+  header .logo {
+    position: relative;
+    transform: translate(-50%, 0);
+    border-radius: 10px;
+  }
+  header .logo img {
+    max-height: 70px;
+  }
+}
+header .menu-icon {
+  cursor: pointer;
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  header .menu-icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translate(0, -50%);
+  }
+}
+header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  transition: all 0.3s;
+  height: 100%;
+}
+@media only screen and (max-width: 1024px) {
+  header .nav {
+    position: absolute;
+    height: 80vh;
+    right: -100%;
+    transition: all 0.3s;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  header .nav__left, header .nav__right {
+    width: 100%;
+  }
+  header .nav li {
+    display: block;
+  }
+}
+header .nav li {
+  margin: 0 20px;
+}
+header .nav li a {
+  font-size: 24px;
+  color: #004834;
+  font-weight: bold;
+  text-decoration: none;
+}
+@media only screen and (max-width: 1024px) {
+  header .nav li a {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  header .nav li a {
+    font-size: 16px;
+  }
+}
+header .nav.active {
+  z-index: 30;
+  right: 0;
+  background-color: #fff;
+  min-width: 50%;
+}
