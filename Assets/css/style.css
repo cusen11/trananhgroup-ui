@@ -38,6 +38,10 @@
   }
 }
 
+img {
+  max-width: 100%;
+}
+
 body {
   font-family: "Fakt-Pro", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -108,7 +112,7 @@ header .menu-icon {
     display: block;
     position: absolute;
     top: 50%;
-    right: 40px;
+    right: 20px;
     transform: translate(0, -50%);
   }
 }
@@ -163,4 +167,31 @@ header .nav.active {
   right: 0;
   background-color: #fff;
   min-width: 50%;
+}
+
+.custom-shape-divider-bottom-1644165049 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1644165049 svg {
+  position: relative;
+  display: block;
+  width: calc(130% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-bottom-1644165049 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.hero {
+  background: linear-gradient(990deg, #26866B, #2F8181, #46759A, #4C6BAB, #545EB7);
+  height: 600px;
+  position: relative;
 }
