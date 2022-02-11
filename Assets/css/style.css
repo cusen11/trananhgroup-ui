@@ -432,6 +432,10 @@ header .nav.active {
   color: #004834;
 }
 
+.news {
+  position: relative;
+  margin-top: 60px;
+}
 .news__item h4 {
   font-size: 14px;
   height: auto;

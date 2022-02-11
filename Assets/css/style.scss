@@ -446,6 +446,8 @@ header{
     }
 } 
 .news{
+    position: relative;
+    margin-top: 60px;
     &__item{
         h4{
             font-size: 14px;
