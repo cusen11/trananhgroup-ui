@@ -1,3 +1,63 @@
-$('.menu-icon').click(()=>{
-    $('.nav').toggleClass('active')
-})
+!(function(){
+    $('.menu-icon').click(()=>{
+        $('.nav').toggleClass('active')
+    })
+    // project slide
+    $('.owl-projects').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        dots:false,
+        autoplay:true,
+        autoplayTimeout:4000,
+        autoplayHoverPause:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:3
+            },
+            1300:{
+                items:4
+            } ,
+            1500:{
+                items:4
+            }
+        }
+    })
+    $('.owl-news').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        dots:false,
+        autoplay:true,
+        autoplayTimeout:4000,
+        autoplayHoverPause:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:3
+            },
+            1300:{
+                items:5
+            }
+        }
+    })
+    var owl = $('.owl-carousel');
+    owl.owlCarousel();
+    $('.customNextBtn').click(function() {
+        owl.trigger('next.owl.carousel');
+    })
+    $('.customPrevBtn').click(function() {
+        owl.trigger('prev.owl.carousel');
+    })
+}())
