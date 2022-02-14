@@ -639,7 +639,7 @@ header{
     margin-top: 100px;
     display: grid;
     grid-template-columns: 50% 25% 25%;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-gap: 3px;
     .item{ 
         background-color: black; 
