@@ -587,6 +587,33 @@ header .nav.active {
   color: #fff;
 }
 
+.pagination {
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+}
+.pagination ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination ul li {
+  margin: 0 3px;
+}
+.pagination a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #004834;
+  padding: 3px;
+  width: 35px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  border: 1px solid #fff;
+}
+
 .hero-news {
   margin: auto;
   padding: 0 60px;
