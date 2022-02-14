@@ -617,6 +617,9 @@ header{
         align-items: center;
         li{
             margin: 0 3px;
+            &.current{
+                a{color: #BDBDBD;}
+            }
         }
     }
     a{
