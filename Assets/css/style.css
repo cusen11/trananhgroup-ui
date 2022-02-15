@@ -87,6 +87,13 @@ a {
   transition: all 0.3s;
   z-index: 1;
 }
+@media only screen and (max-width: 768px) {
+  .button {
+    width: 120px;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+}
 
 .text-center {
   text-align: center;
@@ -211,6 +218,11 @@ header .nav.active {
   width: calc(130% + 1.3px);
   height: 150px;
 }
+@media only screen and (max-width: 768px) {
+  .custom-shape-divider-bottom-1644165049 svg {
+    height: auto;
+  }
+}
 
 .custom-shape-divider-bottom-1644165049 .shape-fill {
   fill: #FFFFFF;
@@ -246,6 +258,13 @@ header .nav.active {
   transition: all 0.3s;
   z-index: 1;
 }
+@media only screen and (max-width: 768px) {
+  .hero__content a {
+    width: 120px;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+}
 .hero__content a:before {
   border-radius: 30px;
   position: absolute;
@@ -272,12 +291,40 @@ header .nav.active {
   font-size: 18px;
   line-height: 1.5;
   color: #fff;
+  max-width: 60%;
 }
 .hero .img {
   position: absolute;
   bottom: -80px;
   right: 50px;
   max-width: 700px;
+}
+@media only screen and (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 60px 25px;
+  }
+  .hero h1 {
+    font-size: 24px;
+  }
+  .hero p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+  .hero .img {
+    display: none;
+  }
+  .hero .img {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    max-width: 500px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .hero {
+    height: auto;
+  }
 }
 
 .message {
@@ -300,11 +347,28 @@ header .nav.active {
   font-weight: bold;
   margin-bottom: 15px;
 }
+@media only screen and (max-width: 768px) {
+  .message {
+    padding: 40px 0 20px 0;
+  }
+  .message h4 {
+    font-size: 16px;
+  }
+  .message p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
 
 .title-section {
   text-align: center;
   font-size: 40px;
   margin-bottom: 25px;
+}
+@media only screen and (max-width: 768px) {
+  .title-section {
+    font-size: 24px;
+  }
 }
 
 .project, .news {
@@ -404,6 +468,58 @@ header .nav.active {
   left: 0;
   transform: translate(60%, -40%);
   content: url(/Assets/images/arrow-white-02.png);
+}
+@media only screen and (max-width: 768px) {
+  .project, .news {
+    padding: 0 25px;
+  }
+  .project h4, .news h4 {
+    font-size: 18px;
+    height: 20px;
+  }
+  .project p, .news p {
+    font-size: 14px;
+    margin: 6px 0px;
+  }
+  .project li, .news li {
+    font-size: 12px;
+  }
+  .project .customPrevBtn, .news .customPrevBtn {
+    width: 45px;
+    height: 45px;
+    background-color: #004834;
+  }
+  .project .customPrevBtn::after, .news .customPrevBtn::after {
+    position: absolute;
+    top: 50%;
+    left: -6px;
+    transform: translate(70%, -58%) rotate(180deg);
+    content: url(/Assets/images/arrow-white-02.png);
+  }
+  .project .customNextBtn, .news .customNextBtn {
+    width: 45px;
+    height: 45px;
+  }
+  .project .customNextBtn::after, .news .customNextBtn::after {
+    position: absolute;
+    top: 50%;
+    left: -6px;
+    transform: translate(60%, -40%);
+    content: url(/Assets/images/arrow-white-02.png);
+  }
+  .project__control, .news__control {
+    margin-top: 20px;
+  }
+  .project .button, .news .button {
+    margin-top: 5px;
+    width: 120px;
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .project, .news {
+    padding: 0 15px;
+  }
 }
 
 .about {
@@ -633,6 +749,16 @@ header .nav.active {
   grid-row: 1/3;
   height: 425px;
 }
+@media only screen and (max-width: 768px) {
+  .hero-news {
+    padding: 0 25px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .hero-news {
+    padding: 0 15px;
+  }
+}
 
 .list-news {
   padding: 0 60px;
@@ -670,6 +796,16 @@ header .nav.active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@media only screen and (max-width: 768px) {
+  .list-news__main {
+    padding: 0 25px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .list-news__main {
+    padding: 0 15px;
+  }
 }
 .list-news .news__item .content {
   padding: 10px;

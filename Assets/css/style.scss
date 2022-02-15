@@ -107,6 +107,11 @@ a{
     overflow: hidden;
     transition: all 0.3s;
     z-index: 1; 
+    @include respond-to(768px){
+        width: 120px;
+        font-size: 14px;
+        margin-right: 10px;  
+    }
 }
 .text-center{
     text-align: center;
@@ -221,6 +226,10 @@ header{
     display: block;
     width: calc(130% + 1.3px);
     height: 150px;
+    @include respond-to(768px){
+        height: auto;
+    }
+     
 }
 
 .custom-shape-divider-bottom-1644165049 .shape-fill {
@@ -253,6 +262,11 @@ header{
             overflow: hidden; 
             transition: all 0.3s;
             z-index: 1;
+            @include respond-to(768px){
+                width: 120px;
+                font-size: 14px;
+                margin-right: 10px;  
+            }
             &:before {
                 border-radius: 30px;
                 position: absolute;
@@ -282,7 +296,8 @@ header{
     p{
         font-size: 18px; 
         line-height: 1.5;
-        color: $color-1
+        color: $color-1;
+        max-width: 60%;
     }
     .img{
         position: absolute; 
@@ -290,6 +305,29 @@ header{
         right: 50px;
         max-width: 700px;
     } 
+    @include respond-to(768px){
+        height: auto;
+        padding: 60px 25px;
+        h1{
+            font-size: 24px; 
+        }
+        p{
+            font-size: 14px;
+            max-width: 100%;  
+        }
+        .img{
+            display: none;
+        }
+        .img{
+            position: absolute; 
+            bottom: 0px;
+            right: 10px;
+            max-width: 500px; 
+        } 
+    }
+    @include respond-to(500px){ 
+        height: auto; 
+    }  
 }
 // ------------------End Hero Home Page--------------
 
@@ -313,11 +351,24 @@ header{
         font-weight: bold;
         margin-bottom: 15px;
     }
+    @include respond-to(768px){ 
+        padding: 40px 0 20px 0; 
+        h4{
+            font-size: 16px; 
+        }
+        p{
+            font-size: 14px; 
+            margin-bottom: 10px;
+        } 
+    } 
 } 
 .title-section{
     text-align: center;
     font-size: 40px; 
     margin-bottom: 25px;
+    @include respond-to(768px){ 
+        font-size: 24px; 
+    } 
 }
 .project,.news{
     position: relative;
@@ -341,6 +392,7 @@ header{
             overflow: hidden;
         }
     }
+    
     h4{
         font-size: 24px;
         color: $color-1;
@@ -418,6 +470,55 @@ header{
             transform: translate(60%, -40%);
             content: url(/Assets/images/arrow-white-02.png);
         }
+    }
+    @include respond-to(768px){
+        padding: 0 25px;
+        h4{
+            font-size: 18px; 
+            height: 20px; 
+        }
+        p{
+            font-size: 14px;
+            margin: 6px 0px; 
+        }
+        li{
+            font-size: 12px; 
+        }
+        .customPrevBtn{ 
+            width: 45px;
+            height: 45px; 
+            background-color: $primaryColor;
+            &::after{
+                position: absolute;
+                top: 50%;
+                left: -6px;
+                transform: translate(70%, -58%) rotate(180deg);
+                content: url(/Assets/images/arrow-white-02.png);
+    
+            }
+        }
+        .customNextBtn{ 
+            width: 45px;
+            height: 45px; 
+            &::after{
+                position: absolute;
+                top: 50%;
+                left: -6px;
+                transform: translate(60%, -40%);
+                content: url(/Assets/images/arrow-white-02.png);
+            }
+        }
+        &__control{ 
+            margin-top: 20px;
+        }
+        .button{
+            margin-top: 5px;
+            width: 120px; 
+            font-size: 16px; 
+        }
+    }
+    @include respond-to(500px){
+        padding: 0 15px;
     }
 } 
 .about{
@@ -651,6 +752,12 @@ header{
             height: 425px;
         }
     } 
+    @include respond-to(768px){
+        padding: 0 25px;
+    }
+    @include respond-to(500px){
+        padding: 0 15px;
+    }
 }
 .list-news{
     padding: 0 60px;
@@ -686,6 +793,12 @@ header{
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
+        }
+        @include respond-to(768px){
+            padding: 0 25px;
+        }
+        @include respond-to(500px){
+            padding: 0 15px;
         }
     } 
     .news__item .content{
