@@ -530,6 +530,7 @@ header .nav.active {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .about .title-section {
   color: #fff;
@@ -548,6 +549,26 @@ header .nav.active {
   background-color: #fff;
   color: #004834;
 }
+@media only screen and (max-width: 768px) {
+  .about {
+    padding: 20px;
+  }
+  .about p {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .about {
+    padding: 15px;
+  }
+  .about__content, .about__video {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .about iframe {
+    height: 200px;
+  }
+}
 
 .news {
   position: relative;
@@ -558,6 +579,11 @@ header .nav.active {
   height: auto;
   white-space: inherit;
   max-height: 58px;
+}
+@media only screen and (max-width: 768px) {
+  .news__item h4 {
+    max-height: 54px;
+  }
 }
 .news__item p {
   font-size: 12px;
@@ -595,6 +621,12 @@ header .nav.active {
 .footer form .gifts input::placeholder {
   color: #ccc;
 }
+@media only screen and (max-width: 768px) {
+  .footer form .gifts input {
+    margin-bottom: 10px;
+    display: block;
+  }
+}
 .footer form .gifts h5 {
   width: 100%;
 }
@@ -617,6 +649,7 @@ header .nav.active {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 .footer iframe {
   width: 555px;
@@ -661,30 +694,32 @@ header .nav.active {
   }
 }
 @media only screen and (max-width: 768px) {
-  .footer .footer {
+  .footer {
     font-size: 12px;
   }
-  .footer .footer .wrapper {
+  .footer .wrapper {
+    padding: 20px;
     width: 100%;
     flex-wrap: wrap;
-    padding: 0;
   }
-  .footer .footer .contacts {
-    padding: 30px;
+  .footer .wrapper .contacts {
+    padding-right: 0;
+    width: 100%;
+    margin-bottom: 40px;
   }
-  .footer .footer iframe {
+  .footer iframe {
     width: 100%;
   }
-  .footer .footer h4 {
+  .footer h4 {
     font-size: 18px;
     margin-bottom: 15px;
   }
-  .footer .footer .maps {
+  .footer .maps {
     padding: 0 5px;
     width: 100%;
     position: relative;
   }
-  .footer .footer .maps::before {
+  .footer .maps::before {
     position: absolute;
     content: "";
     width: 60%;
