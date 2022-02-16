@@ -779,14 +779,13 @@ header .nav.active {
   display: grid;
   grid-template-columns: 50% 25% 25%;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 3px;
+  grid-gap: 5px;
 }
 .hero-news .item {
-  background-color: black;
+  position: relative;
 }
 .hero-news .item:nth-child(1) {
   grid-row: 1/3;
-  height: 425px;
 }
 @media only screen and (max-width: 768px) {
   .hero-news .item:nth-child(1) {
@@ -794,6 +793,56 @@ header .nav.active {
     grid-row: 1;
     grid-column: 1/3;
   }
+}
+.hero-news .item a {
+  display: block;
+}
+.hero-news .item .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+  overflow: hidden;
+}
+.hero-news .item p {
+  font-size: 14px;
+  color: #fff;
+  height: 0;
+  transition: all 1s;
+  opacity: 0;
+}
+.hero-news .item h4 {
+  font-size: 18px;
+  color: #fff;
+  height: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hero-news .item .img {
+  height: 100%;
+  width: 100%;
+}
+.hero-news .item .img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.hero-news .item:hover p {
+  transition: all 1s;
+  height: auto;
+  opacity: 1;
+}
+.hero-news .item:hover h4 {
+  font-size: 18px;
+  color: #fff;
+  height: auto;
+  white-space: initial;
+  overflow: hidden;
+  -webkit-text-emphasis: none;
+          text-emphasis: none;
 }
 @media only screen and (max-width: 768px) {
   .hero-news {
