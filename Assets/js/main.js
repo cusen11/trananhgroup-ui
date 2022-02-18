@@ -49,7 +49,7 @@
         autoplayHoverPause:true,
         responsive:{
             0:{
-                items:1
+                items:2
             },
             600:{
                 items:2
@@ -71,4 +71,5 @@
     $('.news-prev').click(function() {
         owlNews.trigger('prev.owl.carousel');
     })
+    
 }())

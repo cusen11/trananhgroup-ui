@@ -771,6 +771,14 @@ header .nav.active {
   height: 35px;
   border: 1px solid #fff;
 }
+@media only screen and (max-width: 768px) {
+  .pagination a {
+    font-size: 12px;
+    padding: 3px;
+    width: 20px;
+    height: 20px;
+  }
+}
 
 .hero-news {
   margin: auto;
@@ -796,6 +804,8 @@ header .nav.active {
 }
 .hero-news .item a {
   display: block;
+  height: 100%;
+  width: 100%;
 }
 .hero-news .item .content {
   position: absolute;
@@ -810,7 +820,7 @@ header .nav.active {
   font-size: 14px;
   color: #fff;
   height: 0;
-  transition: all 1s;
+  transition: all 0s;
   opacity: 0;
 }
 .hero-news .item h4 {
@@ -831,7 +841,7 @@ header .nav.active {
   object-fit: cover;
 }
 .hero-news .item:hover p {
-  transition: all 1s;
+  transition: all 0.5s;
   height: auto;
   opacity: 1;
 }
@@ -849,6 +859,7 @@ header .nav.active {
     padding: 0 25px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 200px 100px 100px;
+    margin-top: 60px;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -866,6 +877,7 @@ header .nav.active {
   flex-wrap: wrap;
 }
 .list-news__main {
+  margin-top: 40px;
   width: 80%;
   display: flex;
   justify-content: flex-start;
@@ -894,16 +906,6 @@ header .nav.active {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-@media only screen and (max-width: 768px) {
-  .list-news__main {
-    padding: 0 25px;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .list-news__main {
-    padding: 0 15px;
-  }
-}
 .list-news .news__item .content {
   padding: 10px;
   margin-top: 0;
@@ -918,6 +920,7 @@ header .nav.active {
   height: 18px;
 }
 .list-news__highlight {
+  margin-top: 40px;
   width: 20%;
 }
 .list-news__highlight h3 {
@@ -939,4 +942,49 @@ header .nav.active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@media only screen and (max-width: 768px) {
+  .list-news {
+    padding: 0 25px;
+  }
+  .list-news__main {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .list-news__main h3 {
+    font-size: 24px;
+  }
+  .list-news__highlight {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .list-news__highlight h3 {
+    font-size: 24px;
+  }
+  .list-news .news__item {
+    width: 25%;
+    padding: 0 4px;
+    margin-bottom: 8px;
+  }
+  .list-news .news__item img {
+    height: 90px;
+    object-fit: cover;
+  }
+  .list-news .news__item h4 {
+    height: 28px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .list-news {
+    padding: 0 15px;
+  }
+  .list-news .news__item {
+    width: 50%;
+  }
 }

@@ -59,7 +59,7 @@ body{
     font-family: 'Fakt-Pro', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;  
+    overflow-x: hidden;
     
 }
 a,h1,h2,h3,h4,h5,h6,p,i,span{
@@ -768,6 +768,14 @@ header{
         height: 35px;
         border: 1px solid $color-1
     }
+    @include respond-to(768px){
+        a{
+            font-size: 12px; 
+            padding: 3px;
+            width: 20px; 
+            height: 20px; 
+        }
+    }
 }
 .hero-news{ 
     margin: auto;
@@ -789,6 +797,8 @@ header{
         }
         a{
             display: block;
+            height: 100%;
+            width: 100%;
         }
         .content{
             position: absolute;
@@ -803,7 +813,7 @@ header{
             font-size: 14px;
             color:$color-1;
             height: 0;
-            transition: all 1s;
+            transition: all 0s;
             opacity: 0;
         }
         h4{
@@ -826,7 +836,7 @@ header{
         }
         &:hover{
             p{
-                transition: all 1s;
+                transition: all 0.5s;
                 height: auto;
                 opacity: 1;
             } 
@@ -845,6 +855,7 @@ header{
         padding: 0 25px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows:  200px 100px 100px;  
+        margin-top: 60px;
     }
     @include respond-to(500px){
         padding: 0 15px;
@@ -858,6 +869,7 @@ header{
     align-items: flex-start;
     flex-wrap: wrap;  
     &__main{ 
+        margin-top: 40px;
         width: 80%;
         display: flex;
         justify-content: flex-start;
@@ -885,13 +897,8 @@ header{
                 text-overflow: ellipsis;
             }
         }
-        @include respond-to(768px){
-            padding: 0 25px;
-        }
-        @include respond-to(500px){
-            padding: 0 15px;
-        }
     } 
+   
     .news__item .content{
         padding: 10px;
         margin-top: 0; 
@@ -906,6 +913,7 @@ header{
         }
     }
     &__highlight{
+        margin-top: 40px;
         h3{
             font-size: 34px;
             width: 100%;
@@ -926,6 +934,47 @@ header{
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
+        }
+    }
+    @include respond-to(768px){
+        padding: 0 25px;
+        &__main{ 
+            width: 100%;
+            h3{
+                font-size: 24px;
+            }
+            margin-top: 20px;
+        }
+        &__highlight{
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap; 
+            margin-top: 20px;
+            h3{
+                font-size: 24px;
+            }
+        }
+        .news__item{
+            width: 25%;
+            padding: 0 4px;
+            margin-bottom: 8px;  
+            img{
+                height: 90px;
+                object-fit: cover;
+            } 
+            h4{
+                height: 28px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+    @include respond-to(500px){
+        padding: 0 15px;
+        .news__item{
+            width: 50%;
         }
     }
 }
