@@ -187,7 +187,7 @@ header{
         li{
             margin: 0 20px;
             a{
-                font-size: 24px;
+                font-size: 22px;
                 color:$primaryColor;
                 font-weight:bold;
                 text-decoration: none;
@@ -739,12 +739,15 @@ header{
 //-----------------------End Footer-----------------------
 //------------------------News List-----------------------
 .news-page{
-    background: linear-gradient(180deg, #25866B 2.08%, rgba(48, 127, 132, 0.9) 28.13%, rgba(56, 99, 149, 0.9) 51.04%, rgba(69, 98, 173, 0.96) 69.79%, #545EB7 100%);
+    
     .news{
         .title-section{
             color: $color-1;
         }
     }
+}
+.bg-gradient{
+    background: linear-gradient(180deg, #25866B 2.08%, rgba(48, 127, 132, 0.9) 28.13%, rgba(56, 99, 149, 0.9) 51.04%, rgba(69, 98, 173, 0.96) 69.79%, #545EB7 100%); 
 }
 .pagination{
     text-align: center;
@@ -1015,3 +1018,63 @@ header{
     }
 }
 //------------------------End News List-----------------------
+//------------------------Projects-----------------------
+.projects{
+    margin: 150px auto 0 auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    background: linear-gradient(-90deg, #C4C4C4 0%, rgba(196, 196, 196, 0) 100%); 
+    min-height: 450px;
+    padding: 30px;
+    &:nth-child(2n+0){
+        flex-direction: row-reverse;
+        background: linear-gradient(90deg, #C4C4C4 0%, rgba(196, 196, 196, 0) 100%); 
+    }
+    &:last-child{
+        margin-bottom: 150px;
+    }
+    h3{
+        font-size: 36px;
+        margin-bottom: 15px;
+        font-weight: bold;
+        color: $color-1;
+    }
+    p{
+        font-weight: bold;
+        color: $color-1;
+        font-size: 18px;
+    }
+    .img{
+        position: relative;
+        top: -60px;
+        width: 50%;
+        height:100%;
+        img{
+            object-fit: cover;
+        }
+    }
+    .content{
+        width: 45%;
+    }
+    .button{
+        background-color: #197D62;
+        color:$color-1;
+        padding:8px 30px 8px 8px;
+        position: relative;
+        width: 180px;
+        font-size: 18px;
+        font-weight: bold;
+        &::before{
+            content: url(/Assets/images/arrow-03.png);
+            position: absolute;
+            top: 55%;
+            right: 15px;
+            transform: translate(0, -50%);
+
+        }
+
+    }
+}
+//------------------------End Projects-----------------------
