@@ -1078,3 +1078,57 @@ header{
     }
 }
 //------------------------End Projects-----------------------
+//------------------------contacts-----------------------
+.contacts-page{
+    .contacts{
+        background: rgba(26, 26, 26, 0.44);
+        box-shadow: 0px 0px 55px 15px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 200px auto;
+        max-width: 1200px;
+        padding: 40px;
+        .content{
+            width: 45%;
+        }
+        .img{
+            width: 50%;
+        }
+        .contact{
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 10px;
+           &::before{
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                content: '';
+                background: url(/Assets/images/ico-map.png) no-repeat;
+                background-size: contain;
+                top: 0;
+                left: 0;
+           }
+           &.phone::before{
+            background: url(/Assets/images/ico-phone.png) no-repeat;
+            background-size: contain;
+           }
+           &.mail::before{
+            background: url(/Assets/images/ico-mail.png) no-repeat;
+            background-size: contain;
+           }
+        }
+        h4{
+            color: $color-1;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        p{
+            font-size: 16px;
+            color: $color-1;
+        }
+    }
+}
+//------------------------End contacts-----------------------
