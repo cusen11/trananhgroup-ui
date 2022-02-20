@@ -1075,7 +1075,7 @@ header .nav.active {
   transform: translate(0, -50%);
 }
 
-.contacts-page .contacts {
+.contacts-page main .contacts {
   background: rgba(26, 26, 26, 0.44);
   box-shadow: 0px 0px 55px 15px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -1086,18 +1086,18 @@ header .nav.active {
   max-width: 1200px;
   padding: 40px;
 }
-.contacts-page .contacts .content {
+.contacts-page main .contacts .content {
   width: 45%;
 }
-.contacts-page .contacts .img {
+.contacts-page main .contacts .img {
   width: 50%;
 }
-.contacts-page .contacts .contact {
+.contacts-page main .contacts .contact {
   position: relative;
   padding-left: 60px;
   margin-bottom: 10px;
 }
-.contacts-page .contacts .contact::before {
+.contacts-page main .contacts .contact::before {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -1107,21 +1107,21 @@ header .nav.active {
   top: 0;
   left: 0;
 }
-.contacts-page .contacts .contact.phone::before {
+.contacts-page main .contacts .contact.phone::before {
   background: url(/Assets/images/ico-phone.png) no-repeat;
   background-size: contain;
 }
-.contacts-page .contacts .contact.mail::before {
+.contacts-page main .contacts .contact.mail::before {
   background: url(/Assets/images/ico-mail.png) no-repeat;
   background-size: contain;
 }
-.contacts-page .contacts h4 {
+.contacts-page main .contacts h4 {
   color: #fff;
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 5px;
 }
-.contacts-page .contacts p {
+.contacts-page main .contacts p {
   font-size: 16px;
   color: #fff;
 }
